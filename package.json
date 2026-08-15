@@ -12,7 +12,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run clean && tsc -p tsconfig.json --noEmit false && node --test dist/test/**/*.test.js",
     "test:chapter-01": "npm run clean && tsc -p tsconfig.json --noEmit false && node --test --test-name-pattern='第01章' dist/test/**/*.test.js",
-    "build": "next build"
+    "build": "next build",
+    "verify": "bash scripts/verify-next-route-body-lab.sh ."
   },
   "dependencies": {
     "next": "16.3.1",
