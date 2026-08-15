@@ -23,8 +23,7 @@ export async function PATCH(request: Request, context: RouteContext): Promise<Re
   const title = readTitle(payload);
 
   if (title === null) {
-    const rawBody = await request.text();
-    console.warn("更新リクエストのtitleが不正です", { taskId, rawBody });
+    console.warn("更新リクエストのtitleが不正です", { taskId, payload });
 
     return Response.json(
       {

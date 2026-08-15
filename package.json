@@ -10,8 +10,8 @@
   "scripts": {
     "clean": "rm -rf dist .next",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run clean && tsc -p tsconfig.json && node --test dist/test/**/*.test.js",
-    "test:chapter-01": "npm run clean && tsc -p tsconfig.json && node --test --test-name-pattern='第01章' dist/test/**/*.test.js",
+    "test": "npm run clean && tsc -p tsconfig.json --noEmit false && node --test dist/test/**/*.test.js",
+    "test:chapter-01": "npm run clean && tsc -p tsconfig.json --noEmit false && node --test --test-name-pattern='第01章' dist/test/**/*.test.js",
     "build": "next build"
   },
   "dependencies": {
