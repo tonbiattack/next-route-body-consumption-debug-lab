@@ -1,0 +1,28 @@
+{
+  "name": "next-route-body-consumption-debug-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next.js Route HandlerでRequest本文を二重に読む不具合を再現・修正するTypeScriptデバッグラボ",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .next",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run clean && tsc -p tsconfig.json && node --test dist/test/**/*.test.js",
+    "test:chapter-01": "npm run clean && tsc -p tsconfig.json && node --test --test-name-pattern='第01章' dist/test/**/*.test.js",
+    "build": "next build"
+  },
+  "dependencies": {
+    "next": "16.3.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}
